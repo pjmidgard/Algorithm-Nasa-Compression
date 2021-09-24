@@ -345,12 +345,14 @@ class compression:
                                                  ei5=6
                                                  block3=0
                                                  Colaider3=""
+                                                 block4=0
                                     
                                                  while ei5<lenf5*8+6:
                                                             e4b=sda3[ei4:ei4+6]
                                                             e4=sda3[ei4:ei5]
                                                             e4a=sda3[ei4:ei5]
                                                             yu=len(e4)
+                                                            lenf9=len(sda5)
 
                                                             szx=""
 
@@ -372,29 +374,32 @@ class compression:
                                                             block2=0
                                                             block3=0
                                                             Spin=1
+                                                            
+                                                            if block3==0:
+                                                            	block3=0
                                                       
-                                                            if block2==16 and Spin==0:
+                                                            if block2==16 and Spin==0 and lenf9<246:
                                                                 
                                                                 
                                                                 block2=0
                                                                 Specktr=0
                                                                 Spin=0
                                                                 sda5=sda5+"0"
-                                                                block3=0
+                                                                
 
-                                                            if block2==16 and Spin==1:
+                                                            if block2==16 and Spin==1 and lenf9<246:
                                                                 
                                                                 
                                                                 block2=0
                                                                 Specktr=0
                                                                 Spin=0
-                                                                block3=0
+                                                               
 
                                                                 
                                                                
 
                                                             
-                                                            if e4b==Colaider3:
+                                                            if e4b==Colaider3 and lenf9<246:
                                                                 Specktr=1
                                                                 
 
@@ -427,7 +432,7 @@ class compression:
 
 
                                                             
-                                                                
+                                                            block4=block4+1 
                                                             ei4=ei4+6
                                                             ei5=ei5+6
                                         
@@ -439,10 +444,10 @@ class compression:
                                     lenf=len(Colaider)
                                     
                                      
-                                    xc=32-lenf%32
+                                    xc=8-lenf%8
                                     z=0
                                     if xc!=0:
-                                        if xc!=32:
+                                        if xc!=8:
                                             while z<xc:
                                                 szx="0"+szx
                                                 z=z+1
