@@ -15,6 +15,6 @@ Calculus Algorithm it take 14 bits and find what not exist and write it, also ne
 Algorithm White hole 2024:
 New RLE:
 RLE:
-Algorithm NASA We compress we to find 6 bits count where find save this on the of the while by 2 bits we use 00, 10 and 11.
+Algorithm NASA We compress we to find 6 bits count where find save this on the of the while by 4 bits we use 0, 1.
 Next I will try making compression better.
 Bye, bye.
