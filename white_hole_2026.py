@@ -1,4 +1,4 @@
-#Alogrithm NASA We compress We to find 6 bits count where find save this on the of the while by 2 bits we use 00,10 and 11.
+#Alogrithm NASA We compress We to find 6 bits count where find save this on the of the while by 4 bits we use 0,1.
 from time import time
 cvf=0
 Portal=2
@@ -137,7 +137,7 @@ class compression:
                     e3=1
                     e4=""
                     ei4=0
-                    ei5=6
+                    ei5=7
                     
                     
                     e4=""
@@ -342,6 +342,8 @@ class compression:
                                     if i==1:
                                                  Spin=0
                                                  sda3=sda2
+                                                 ei5=6
+                                                 
                                     
                                                  while ei5<lenf5*8+6:
                                                             e4b=sda3[ei4:ei4+6]
@@ -349,15 +351,15 @@ class compression:
                                                             e4a=sda3[ei4:ei5]
                                                             yu=len(e4)
                                                       
-                                                            if block2==4 and Spin==0:
+                                                            if block2==16 and Spin==0:
                                                                 
                                                                 
                                                                 block2=0
                                                                 Specktr=0
                                                                 Spin=0
-                                                                sda5=sda5+"10"
+                                                                sda5=sda5+"0"
 
-                                                            if block2==4 and Spin==1:
+                                                            if block2==16 and Spin==1:
                                                                 
                                                                 
                                                                 block2=0
@@ -365,7 +367,7 @@ class compression:
                                                                 Spin=0
 
                                                                 
-                                                                sda5=sda5+"00"
+                                                               
 
                                                             
                                                             if e4b=="000000":
@@ -378,17 +380,17 @@ class compression:
                                                                 Colaider=bin(block2)[2:]
                                                                 lenf=len(Colaider)
                                                              
-                                                                xc=2-lenf%2
+                                                                xc=4-lenf%4
                                                                 z=0
                                                                 if xc!=0:
-                                                                    if xc!=2:
+                                                                    if xc!=4:
                                                                         while z<xc:
                                                                             szx="0"+szx
                                                                             z=z+1
                                                                             
                                                                 Colaider=Colaider+szx
                                                             
-                                                                sda5=sda5+"11"+Colaider
+                                                                sda5=sda5+"1"+Colaider
                                                                 
                                                                 block2=0
                                                                 Spin=1
@@ -396,7 +398,7 @@ class compression:
                                                             if e4b!="000000":
                                                                 sda4=sda4+e4
                                                                 block2=block2+1
-
+                                                                
                                                             ei4=ei4+6
                                                             ei5=ei5+6
                                         
