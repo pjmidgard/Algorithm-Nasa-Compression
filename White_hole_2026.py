@@ -424,6 +424,10 @@ class compression:
                                                                 block2=0
                                                                 block3=0
                                                                 Spin=1
+                                                                
+                                                            if e4b==Colaider3 and lenf9>=246:
+                                                                sda4=sda4+e4
+                                                         
                                                            
                                                             if e4b!=Colaider3:
                                                                 sda4=sda4+e4
