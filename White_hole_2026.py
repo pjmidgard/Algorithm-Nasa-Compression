@@ -370,15 +370,12 @@ class compression:
                                                             Colaider3=Colaider3+szx
                                                             
                                                             
-                                                                
-                                                            block2=0
-                                                            block3=0
-                                                            Spin=1
+                                                               
                                                             
-                                                            if block3==0:
+                                                            if block3==63:
                                                             	block3=0
                                                       
-                                                            if block2==16 and Spin==0 and lenf9<246:
+                                                            if block2==16 and Spin==0:
                                                                 
                                                                 
                                                                 block2=0
@@ -387,7 +384,7 @@ class compression:
                                                                 sda5=sda5+"0"
                                                                 
 
-                                                            if block2==16 and Spin==1 and lenf9<246:
+                                                            if block2==16 and Spin==1:
                                                                 
                                                                 
                                                                 block2=0
@@ -424,10 +421,7 @@ class compression:
                                                                 block2=0
                                                                 block3=0
                                                                 Spin=1
-                                                                
-                                                            if e4b==Colaider3 and lenf9>=246:
-                                                                sda4=sda4+e4
-                                                         
+                                                             
                                                            
                                                             if e4b!=Colaider3:
                                                                 sda4=sda4+e4
@@ -448,10 +442,10 @@ class compression:
                                     lenf=len(Colaider)
                                     
                                      
-                                    xc=8-lenf%8
+                                    xc=32-lenf%32
                                     z=0
                                     if xc!=0:
-                                        if xc!=8:
+                                        if xc!=32:
                                             while z<xc:
                                                 szx="0"+szx
                                                 z=z+1
