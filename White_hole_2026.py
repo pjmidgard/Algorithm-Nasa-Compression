@@ -430,7 +430,7 @@ class compression:
 
 
                                                             
-                                                            block4=block4+1 
+                                                            
                                                             ei4=ei4+6
                                                             ei5=ei5+6
                                         
