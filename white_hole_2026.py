@@ -343,13 +343,35 @@ class compression:
                                                  Spin=0
                                                  sda3=sda2
                                                  ei5=6
-                                                 
+                                                 block3=0
+                                                 Colaider3=""
                                     
                                                  while ei5<lenf5*8+6:
                                                             e4b=sda3[ei4:ei4+6]
                                                             e4=sda3[ei4:ei5]
                                                             e4a=sda3[ei4:ei5]
                                                             yu=len(e4)
+
+                                                            szx=""
+
+                                                            Colaider3=bin(block3)[2:]
+                                                            lenf=len(Colaider3)
+                                                             
+                                                            xc=6-lenf%6
+                                                            z=0
+                                                            if xc!=0:
+                                                                if xc!=6:
+                                                                    while z<xc:
+                                                                        szx="0"+szx
+                                                                        z=z+1
+                                                                            
+                                                            Colaider3=Colaider3+szx
+                                                            
+                                                            
+                                                                
+                                                            block2=0
+                                                            block3=0
+                                                            Spin=1
                                                       
                                                             if block2==16 and Spin==0:
                                                                 
@@ -358,6 +380,7 @@ class compression:
                                                                 Specktr=0
                                                                 Spin=0
                                                                 sda5=sda5+"0"
+                                                                block3=0
 
                                                             if block2==16 and Spin==1:
                                                                 
@@ -365,12 +388,13 @@ class compression:
                                                                 block2=0
                                                                 Specktr=0
                                                                 Spin=0
+                                                                block3=0
 
                                                                 
                                                                
 
                                                             
-                                                            if e4b=="000000":
+                                                            if e4b==Colaider3:
                                                                 Specktr=1
                                                                 
 
@@ -393,11 +417,16 @@ class compression:
                                                                 sda5=sda5+"1"+Colaider
                                                                 
                                                                 block2=0
+                                                                block3=0
                                                                 Spin=1
                                                            
-                                                            if e4b!="000000":
+                                                            if e4b!=Colaider3:
                                                                 sda4=sda4+e4
                                                                 block2=block2+1
+                                                                block3=block3+1
+
+
+                                                            
                                                                 
                                                             ei4=ei4+6
                                                             ei5=ei5+6
