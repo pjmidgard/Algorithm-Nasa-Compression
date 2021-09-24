@@ -418,8 +418,8 @@ class compression:
                                                                             
                                     Colaider=Colaider+szx
                                                             
-                                                                
-                                    sda5=sda5+Colaider+sda5+sda4
+                                    sda6=""                            
+                                    sda6=sda6+Colaider+sda5+sda4
                                                                 
                                                                 
                                     block2=0
@@ -441,11 +441,11 @@ class compression:
                                                     if i==2:
                                                         wer=""
                                                         szx=""
-                                                        wer=sda4
+                                                        wer=sda5
 
                                                     if i==1:
                                                         wer=""
-                                                        wer=sda4
+                                                        wer=sda6
                                                         sda4=""
                                                         szx=""
 
@@ -475,7 +475,7 @@ class compression:
                                                     assx=10
                                                     assxq=assxq+1
                                                     sda4=""
-                                                    sda3=""
+                                                    sda2=sda6
                                                     if assxq==1:
                                                        assx=10 
                                                     if assx==10:        
