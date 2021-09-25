@@ -367,7 +367,7 @@ class compression:
                                                                         szx="0"+szx
                                                                         z=z+1
                                                                             
-                                                            Colaider3=Colaider3+szx
+                                                            Colaider3=szx+Colaider3
                                                             
                                                             
                                                                
@@ -396,7 +396,7 @@ class compression:
                                                                
 
                                                             
-                                                            if e4b==Colaider3 and lenf9<246:
+                                                            if e4b==Colaider3:
                                                                 Specktr=1
                                                                 
 
@@ -414,7 +414,7 @@ class compression:
                                                                             szx="0"+szx
                                                                             z=z+1
                                                                             
-                                                                Colaider=Colaider+szx
+                                                                Colaider=szx+Colaider
                                                             
                                                                 sda5=sda5+"1"+Colaider
                                                                 
@@ -450,7 +450,8 @@ class compression:
                                                 szx="0"+szx
                                                 z=z+1
                                                                             
-                                    Colaider=Colaider+szx
+                                    Colaider=szx+Colaider
+                                    
                                                             
                                     sda6=""                            
                                     sda6=sda6+Colaider+sda5+sda4
