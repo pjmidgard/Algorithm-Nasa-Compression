@@ -15,6 +15,6 @@ Calculus Algorithm it take 14 bits and find what not exist and write it, also ne
 Algorithm White hole 2024:
 New Pi:
 Pi: Speed 2MB/s per 1 circle.
-Need to count pi 10 Millions, 131 bits, 34 symbols like this 0, 10, 110000-111111, 6000 bits just on the start.
+Need to count pi 10 Millions, 131 bits, 1-34 symbol(s) like this 0, 10, 110000-111111, 6000 bits just on the start.
 Next I will try making compression better.
 Bye, bye.
