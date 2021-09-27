@@ -946,7 +946,7 @@ class compression:
                                         	while z<xc:
                                         		   szx="0"+szx
                                         		   z=z+1
-                                    Colaider3=Colaider3+szx
+                                    Colaider3=szx+Colaider3
    							                                   
                                     sda6=Colaider3+sda4+sda2[6000:]
                                                          
