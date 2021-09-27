@@ -1,4 +1,3 @@
-#Alogrithm NASA We compress We to find 6 bits count where find save this on the of the while by 4 bits we use 0,1.
 from time import time
 cvf=0
 Portal=2
