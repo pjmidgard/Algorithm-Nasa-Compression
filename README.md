@@ -14,7 +14,7 @@ API compression algorithm: it takes from 1 to 348 variations.
 Calculus Algorithm it take 14 bits and find what not exist and write it, also need write 1 for compress 0 when not compress or just compress like this 2^n. Need add ones then delete it.
 Algorithm White hole 2024:
 New Pi:
-Pi:
+Pi: Speed 2MB/s
 Need to count pi 10 Millions, 131 bits, 34 symbols like this 0, 10, 110000-111111, 6000 bits just on the start.
 Next I will try making compression better.
 Bye, bye.
