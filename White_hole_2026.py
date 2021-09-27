@@ -933,10 +933,23 @@ class compression:
                                     szx=""
 
                                      
-                                    sda6=""                            
-                                    sda6=sda4+sda2[6000:]
-                                                                
-                                                                
+                                    sda6=""
+
+                                    sda4f=len(sda4)
+                                    
+                                    Colaider3=bin(sda4f)[2:]
+                                    lenf=len(Colaider3)
+                                    xc=13-lenf%13
+                                    z=0
+                                    if xc!=0:
+                                    	if xc!=13:
+                                        	while z<xc:
+                                        		   szx="0"+szx
+                                        		   z=z+1
+                                    Colaider3=Colaider3+szx
+   							                                   
+                                    sda6=Colaider3+sda4+sda2[6000:]
+                                                         
                                     block2=0
                                     Spin=1
                                     Spinh=0              
