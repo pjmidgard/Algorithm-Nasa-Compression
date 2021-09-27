@@ -251,7 +251,9 @@ class compression:
 
                                     lenf3=len(sda2)
                                 lenf2=len(sda2)
-                                            
+                                
+                                    
+                                     
                                 block2=0
                                 if i==2:
 
@@ -410,171 +412,15 @@ class compression:
 
                                 e4=""
 
-                                e2=0
-                                e3=1
-
-
-                                e4=sda2[e2:e3]
-                                
-                                block=block+1
-
-                                if assxw==e3%2 or assxw==e3%10:
-                                               
-                                            if e4=="1" and e3== e3%10:
-                                                    sda3=sda3+"0"
-                                                    e4="0"
-                                                    e4=""
-                                                
-                                            elif e4=="0" and e3== e3%11:
-                                                sda3=sda3+"1"
-                                                e4="1"
-                                                e4=""
-                                                
-                                                    
-                                            elif e4=="1":
-                                                    sda3=sda3+"0"
-                                                    e4="0"
-                                                    e4=""
-                                                
-                                         
-                                            elif e4=="1":
-                                                sda3=sda3+"1"
-                                                e4="1"
-                                                e4=""   
-                                               
-                                            elif e4=="1" and e3== e3%3:
-                                                    sda3=sda3+"0"
-                                                    e4="0"
-                                                    e4=""
-                                                
-                                            elif e4=="0" and e3== e3%2:
-                                                sda3=sda3+"1"
-                                                e4="1"
-                                                e4=""
-                                                
-                                                    
-                         
-                                    
-                                    
-                                            elif e4=="0" and e3== e3%9:
-                                                    sda3=sda3+"1"
-                                                    e4="1"
-                                                    e4=""
-                                                
-                                            elif e4=="1" and e3== e3%8:
-                                                sda3=sda3+"0"
-                                                e4="0"
-                                                e4=""
-                                                
-                                                    
-                                            elif e4=="1" and e3 ==e3%1:
-                                                    sda3=sda3+"0"
-                                                    e4="0"
-                                                    e4=""
-                                                    
-                                            elif e4=="0" and e3 ==e3%1:
-                                                    sda3=sda3+"1"
-                                                    e4="1"
-                                                    e4=""
-                                                    
-                                                    
-                                                    
-                                        
-                                            
-                                
-                                
-                                if e4=="1" and e3== e3%9+assxw:
-                                	sda3=sda3+"0"
-                                	e4="0"
-                                	e4=""
-                                    
-                                elif e4=="0" and e3== e3%8+assxw:
-                                    sda3=sda3+"1"
-                                    e4="1"
-                                    e4=""
-                                
-                                elif e4=="0" and e3== e3%7:
-                                	sda3=sda3+"1"
-                                	e4="0"
-                                	e4=""
-                                    
-                                elif e4=="1" and e3== e3%6:
-                                    sda3=sda3+"0"
-                                    e4="1"
-                                    e4=""
-                                
-                                elif e4=="0" and e3== e3%5:
-                                	sda3=sda3+"0"
-                                	e4="0"
-                                	e4=""
-                                    
-                                elif e4=="1" and e3== e3%4:
-                                    sda3=sda3+"1"
-                                    e4="1"
-                                    e4=""
-                                    
-                           
-                                elif e4=="1" and e3== e3%3:
-                                	sda3=sda3+"0"
-                                	e4="0"
-                                	e4=""
-                                    
-                                elif e4=="0" and e3== e3%2:
-                                    sda3=sda3+"1"
-                                    e4="1"
-                                    e4=""
-                                    
-                                        
-                                elif e4=="1":
-                                	sda3=sda3+"0"
-                                	e4="0"
-                                	e4=""
-                                    
-                                elif e4=="0":
-                                    sda3=sda3+"1"
-                                    e4="1"
-                                    e4=""  
-                                
-
-	                                
-	                                        
-
-                                        
- 
-                                         
-   
-                               
-                             
-                                e2=e2+1
-                                e3=e3+1
-
-                                e4=""
-                          
-                                if e3==cvf:
-                                    e2=0
-                                    e3=1
-                                    
-                                    cvf=cvf+1
-
-                                    cvf=sw
-                                    sw=sw+1
-                             
-                                if cvf==lenf5*8+4:
-                                    sw=sw+2
-                                    cvf=c
-                                    cvf1=cvf1+1
-                                     
-                                    c=c+2
-
-                                if cvf1==1:
+                              
                           
                                 
-                                    cvf1=1
+                                cvf1=1
                                 if cvf1==1:
                                     
                                     if i==1:
                                                 Spin=0
-                                                
+                                                sda3=sda2
                                                 ei4=0
                                                 ei5=131
                                                 block3=0
