@@ -1005,7 +1005,7 @@ class compression:
                                                     assxq=assxq+1
                                                     
                                                     
-                                                    if assxq==2000:
+                                                    if assxq==20000:
                                                         assx=10 
                                                     if assx==10:        
                                               
