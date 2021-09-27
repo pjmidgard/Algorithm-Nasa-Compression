@@ -420,7 +420,7 @@ class compression:
                                     
                                     if i==1:
                                                 Spin=0
-                                                sda3=sda2[6000:]
+                                                sda3=sda2[:6000]
                                                 ei4=0
                                                 ei5=131
                                                 block3=0
