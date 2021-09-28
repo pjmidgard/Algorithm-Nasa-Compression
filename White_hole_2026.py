@@ -376,7 +376,7 @@ class compression:
                                                             lenf=len(Colaider3)
                                                             
 
-                                                            if lenf==0 or PI_take=="-1":
+                                                            if lenf==0 or PI_take_long=="-1":
 
                                                 
                                                                 sda4=sda4+"0"+e4
