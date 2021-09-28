@@ -40,9 +40,7 @@ class compression:
                     namea="file.W"
                     namem=""
                     namema="?"
-                    END_workingw=0
-                    blockw=5
-                    blockw1=4
+        
                     nameas=name
                     nac=len(nameas)
 
