@@ -266,9 +266,7 @@ class compression:
                                                                         z=z+1
                                                                             
                                                             Colaider3=szx+Colaider3
-                                                            
-                                                        
-                                                      
+                                                           
                                                             if block2==16:
                                                                 
                                                                 
