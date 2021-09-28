@@ -36,8 +36,6 @@ class compression:
                     e4b=""
                     ei8=""
                         
-                    corridors=0
-                    cor=7
                     name = input("What is name of file? ")
                     namea="file.W"
                     namem=""
