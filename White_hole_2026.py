@@ -60,7 +60,7 @@ class compression:
                     
                     nac=len(nameas)
                     
-                    countraz=0
+                    Circle_times3=0
                     cvf=2
                     cvf1=0
                     s=""
@@ -119,10 +119,10 @@ class compression:
 
                             cvf=cvf+1
                             
-                            countraz=countraz+1
+                            Circle_times3=Circle_times3+1
 
                             with open(nameas, "ab") as f2:
-                                if countraz==1:
+                                if Circle_times3==1:
 
                                  
                                     sda=bin(int(binascii.hexlify(data),16))[2:]
@@ -138,7 +138,7 @@ class compression:
                                             
                                     sda=sda+sda2
 
-                                    if countraz==1:
+                                    if Circle_times3==1:
                                         sda2=sda
                             
                                     n = int(sda2, 2)
