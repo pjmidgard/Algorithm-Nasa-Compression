@@ -925,10 +925,11 @@ class compression:
                                     xc=13-lenf%13
                                     z=0
                                     if xc!=0:
-                                    	if xc!=13:
-                                        	while z<xc:
-                                        		   szx="0"+szx
-                                        		   z=z+1
+                                        if xc!=13:
+                                            while z<xc:
+                                                szx="0"+szx
+                                                z=z+1
+                                                
                                     Colaider3=szx+Colaider3
    							                                   
                                     sda6=Colaider3+sda4+sda2[6000:]
