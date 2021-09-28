@@ -362,6 +362,8 @@ class compression:
 
                                                             
                                                             block3=str(block3)
+
+                                                            block=len(block3)
                                                            
                                                             PI_take=str(PI)
                                                             
