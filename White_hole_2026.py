@@ -1,6 +1,5 @@
 from time import time
 cvf=0
-Portal=2
 import os
 import binascii
 
@@ -8,7 +7,6 @@ import binascii
 #m.mp.dps = 100000
 #PI=4 * m.atan(1)
                        
-
 zzaax=""
 szxzzzas=""
 asaaq=""
@@ -97,7 +95,6 @@ class compression:
                     namea="file.W"
                     namem=""
                     namema="?"
-                    Portal=2
                     assxw=0
                     blockw=5
                     blockw1=4
@@ -112,20 +109,6 @@ class compression:
                         nameas=name[:nac-4]
                         nac=len(nameas)
                     
-                    
-                    if nameas[nac-5:nac]==".docx":
-                        Portal=1
-                    if nameas[nac-4:nac]==".pdf":
-                        Portal=3
-                    if nameas[nac-4:nac]==".doc":
-                        Portal=1
-                    if nameas[nac-4:nac]==".png":
-                        Portal=7
-                    if nameas[nac-4:nac]==".jpg":
-                        Portal=9
-                    if nameas[nac-4:nac]==".mp4":
-                        Portal=8
-                      
                     if i==1:
                        
                         nameas=name+".bin"
