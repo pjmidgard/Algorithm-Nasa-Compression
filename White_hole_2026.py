@@ -6,67 +6,14 @@ import binascii
 #import mpmath as m
 #m.mp.dps = 100000
 #PI=4 * m.atan(1)
-                       
-zzaax=""
-szxzzzas=""
-asaaq=""
-assa=0
-adwll1=0
-ddf=0
-cvz31=0
-rw=0
-qqw1q=""
-lenfzzz=0
-fffgjv=""
-fffgjv1=""
-zzaax1=""
-qqqs=0
-a=0
-blockw=5
-blockw1=4
-cvb=0
-aqw1=0
-zsaqq=""
-qqqwz=0
-assx=0
-ass=0
-asss=0
-b=0
-aaqw=""
-aaqws=""
-l=""
-j=0
-b=0
-aq=0
-qfl=0
-t=0
-h=0
-byteb=""
-notexist=""
+
+Circle_times=0
+END_working=0
 lenf=0
-numberschangenotexistq = []
-numberschangenotexistqz = []
-qwa=0
-add=0
-m = []
-p=0
 namea=""
-d=1
-a=0
-asd=""
-b=0
 szx=""
-
-
-asf2="0b"
-while b<1790:
-    m+=[-1]
-    b=b+1
-k = []
 wer=""
-qtqweqw=""
-numberschangenotexist = []
-numbers = []
+
 namez = input("c for compress or e for extract? ")
 #@Author Jurijus pacalovas
 class compression:
@@ -95,7 +42,7 @@ class compression:
                     namea="file.W"
                     namem=""
                     namema="?"
-                    assxw=0
+                    END_workingw=0
                     blockw=5
                     blockw1=4
                     nameas=name
@@ -136,10 +83,6 @@ class compression:
                     sda3=""
                     sda2=""
 
-                    sscvf=0
-                    
-                    qqqqwzl=0
-
                     block=1
                     block2=0
                     block3=0
@@ -165,13 +108,13 @@ class compression:
                         lenf1=len(data)
                         lenf5=len(data)
                         
-                        assx=0
-                        qqqwz=0
-                        assxq=0
+                        END_working=0
+                        Circle_times=0
+                        Circle_times2=0
 
 
                        
-                        while assx<10:
+                        while END_working<10:
                        
                             aas1=0
                             a1=0
@@ -211,10 +154,7 @@ class compression:
                                     sssssw=len(jl)
                                     
                                     data=jl
-                                    qqqwz=qqqwz+1
-                                   
-                                    
-
+                                  
                                     lenf5=len(data)
 
                                     sda=bin(int(binascii.hexlify(data),16))[2:]
@@ -426,23 +366,23 @@ class compression:
                                                             
                                                             block3=str(block3)
                                                            
-                                                            PIt=str(PI)
+                                                            PI_take=str(PI)
                                                             
 
-                                                            xe = PIt.find(block3)
-                                                            PItd=str(xe)
-                                                            block=len(PItd)
+                                                            xe = PI_take.find(block3)
+                                                            PI_take_long=str(xe)
+                                                            block=len(PI_take_long)
 
 
                                                             Colaider3=bin(xe)[2:]
                                                             lenf=len(Colaider3)
 
-                                                            if lenf==0 or PItd=="-1":
+                                                            if lenf==0 or PI_take=="-1":
 
                                                 
                                                                 sda4=sda4+"0"+e4
 
-                                                            elif lenf>0 and lenf<4 and lenf!=0 and block==1 and PIt!="-1":
+                                                            elif lenf>0 and lenf<4 and lenf!=0 and block==1 and PI_take!="-1":
                                                             
                                                                 xc=3-lenf%3
                                                                 z=0
@@ -455,7 +395,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1100000"+Colaider3
 
-                                                            elif lenf>3 and lenf<7 and lenf!=0 and block==2 and PIt!="-1":
+                                                            elif lenf>3 and lenf<7 and lenf!=0 and block==2 and PI_take!="-1":
                                                             
                                                                 xc=6-lenf%6
                                                                 z=0
@@ -468,7 +408,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1100001"+Colaider3
                                                             
-                                                            elif lenf>6 and lenf<10 and lenf!=0 and block==3 and PIt!="-1":
+                                                            elif lenf>6 and lenf<10 and lenf!=0 and block==3 and PI_take!="-1":
                                                             
                                                                 xc=9-lenf%9
                                                                 z=0
@@ -481,7 +421,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1100010"+Colaider3
 
-                                                            elif lenf>9 and lenf<14 and lenf!=0 and block==4 and PIt!="-1":
+                                                            elif lenf>9 and lenf<14 and lenf!=0 and block==4 and PI_take!="-1":
                                                             
                                                                 xc=13-lenf%13
                                                                 z=0
@@ -495,7 +435,7 @@ class compression:
                                                                 sda4=sda4+"1100011"+Colaider3
 
 
-                                                            elif lenf>13 and lenf<17 and lenf!=0 and block==5 and PIt!="-1":
+                                                            elif lenf>13 and lenf<17 and lenf!=0 and block==5 and PI_take!="-1":
                                                             
                                                                 xc=16-lenf%16
                                                                 z=0
@@ -508,7 +448,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1100100"+Colaider3
 
-                                                            elif lenf>16 and lenf<20 and lenf!=0 and block==6 and PIt!="-1":
+                                                            elif lenf>16 and lenf<20 and lenf!=0 and block==6 and PI_take!="-1":
                                                             
                                                                 xc=19-lenf%19
                                                                 z=0
@@ -522,7 +462,7 @@ class compression:
                                                                 sda4=sda4+"1100101"+Colaider3
 
 
-                                                            elif lenf>19 and lenf<24 and lenf!=0 and block==7 and PIt!="-1":
+                                                            elif lenf>19 and lenf<24 and lenf!=0 and block==7 and PI_take!="-1":
                                                             
                                                                 xc=24-lenf%24
                                                                 z=0
@@ -536,7 +476,7 @@ class compression:
                                                                 sda4=sda4+"1100110"+Colaider3
 
                                                             
-                                                            elif lenf>23 and lenf<27 and lenf!=0 and block==8 and PIt!="-1":
+                                                            elif lenf>23 and lenf<27 and lenf!=0 and block==8 and PI_take!="-1":
                                                             
                                                                 xc=26-lenf%26
                                                                 z=0
@@ -549,7 +489,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1100111"+Colaider3
 
-                                                            elif lenf>26 and lenf<30 and lenf!=0 and block==9 and PIt!="-1":
+                                                            elif lenf>26 and lenf<30 and lenf!=0 and block==9 and PI_take!="-1":
                                                             
                                                                 xc=29-lenf%29
                                                                 z=0
@@ -562,7 +502,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1101000"+Colaider3
 
-                                                            elif lenf>29 and lenf<34 and lenf!=0 and block==10 and PIt!="-1":
+                                                            elif lenf>29 and lenf<34 and lenf!=0 and block==10 and PI_take!="-1":
                                                             
                                                                 xc=33-lenf%33
                                                                 z=0
@@ -575,7 +515,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1101001"+Colaider3
 
-                                                            elif lenf>33 and lenf<37 and lenf!=0 and block==11 and PIt!="-1":
+                                                            elif lenf>33 and lenf<37 and lenf!=0 and block==11 and PI_take!="-1":
                                                             
                                                                 xc=36-lenf%36
                                                                 z=0
@@ -589,7 +529,7 @@ class compression:
                                                                 sda4=sda4+"1101001"+Colaider3
 
 
-                                                            elif lenf>36 and lenf<41 and lenf!=0 and block==12 and PIt!="-1":
+                                                            elif lenf>36 and lenf<41 and lenf!=0 and block==12 and PI_take!="-1":
                                                             
                                                                 xc=40-lenf%40
                                                                 z=0
@@ -602,7 +542,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1101010"+Colaider3
 
-                                                            elif lenf>40 and lenf<45 and lenf!=0 and block==13 and PIt!="-1":
+                                                            elif lenf>40 and lenf<45 and lenf!=0 and block==13 and PI_take!="-1":
                                                             
                                                                 xc=44-lenf%44
                                                                 z=0
@@ -615,7 +555,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1101011"+Colaider3
 
-                                                            elif lenf>44 and lenf<49 and lenf!=0 and block==14 and PIt!="-1":
+                                                            elif lenf>44 and lenf<49 and lenf!=0 and block==14 and PI_take!="-1":
                                                             
                                                                 xc=48-lenf%48
                                                                 z=0
@@ -628,7 +568,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1101100"+Colaider3
 
-                                                            elif lenf>48 and lenf<53 and lenf!=0 and block==15 and PIt!="-1":
+                                                            elif lenf>48 and lenf<53 and lenf!=0 and block==15 and PI_take!="-1":
                                                             
                                                                 xc=52-lenf%52
                                                                 z=0
@@ -641,7 +581,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1101101"+Colaider3
 
-                                                            elif lenf>52 and lenf<57 and lenf!=0 and block==16 and PIt!="-1":
+                                                            elif lenf>52 and lenf<57 and lenf!=0 and block==16 and PI_take!="-1":
                                                             
                                                                 xc=56-lenf%56
                                                                 z=0
@@ -655,7 +595,7 @@ class compression:
                                                                 sda4=sda4+"1101110"+Colaider3
 
                                                             
-                                                            elif lenf>56 and lenf<61 and lenf!=0 and block==17 and PIt!="-1":
+                                                            elif lenf>56 and lenf<61 and lenf!=0 and block==17 and PI_take!="-1":
                                                             
                                                                 xc=60-lenf%60
                                                                 z=0
@@ -668,7 +608,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1101111"+Colaider3
 
-                                                            elif lenf>60 and lenf<65 and lenf!=0 and block==18 and PIt!="-1":
+                                                            elif lenf>60 and lenf<65 and lenf!=0 and block==18 and PI_take!="-1":
                                                             
                                                                 xc=64-lenf%64
                                                                 z=0
@@ -681,7 +621,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1110000"+Colaider3
 
-                                                            elif lenf>64 and lenf<69 and lenf!=0 and block==19 and PIt!="-1":
+                                                            elif lenf>64 and lenf<69 and lenf!=0 and block==19 and PI_take!="-1":
                                                             
                                                                 xc=68-lenf%68
                                                                 z=0
@@ -695,7 +635,7 @@ class compression:
                                                                 sda4=sda4+"1110001"+Colaider3
 
 
-                                                            elif lenf>68 and lenf<73 and lenf!=0 and block==20 and PIt!="-1":
+                                                            elif lenf>68 and lenf<73 and lenf!=0 and block==20 and PI_take!="-1":
                                                             
                                                                 xc=72-lenf%72
                                                                 z=0
@@ -709,7 +649,7 @@ class compression:
                                                                 sda4=sda4+"1110010"+Colaider3
 
 
-                                                            elif lenf>72 and lenf<77 and lenf!=0 and block==21 and PIt!="-1":
+                                                            elif lenf>72 and lenf<77 and lenf!=0 and block==21 and PI_take!="-1":
                                                             
                                                                 xc=76-lenf%76
                                                                 z=0
@@ -723,7 +663,7 @@ class compression:
                                                                 sda4=sda4+"1110011"+Colaider3
 
 
-                                                            elif lenf>76 and lenf<81 and lenf!=0 and block==22 and PIt!="-1":
+                                                            elif lenf>76 and lenf<81 and lenf!=0 and block==22 and PI_take!="-1":
                                                             
                                                                 xc=80-lenf%80
                                                                 z=0
@@ -737,7 +677,7 @@ class compression:
                                                                 sda4=sda4+"1110100"+Colaider3
 
 
-                                                            elif lenf>80 and lenf<85 and lenf!=0 and block==23 and PIt!="-1":
+                                                            elif lenf>80 and lenf<85 and lenf!=0 and block==23 and PI_take!="-1":
                                                             
                                                                 xc=84-lenf%84
                                                                 z=0
@@ -751,7 +691,7 @@ class compression:
                                                                 sda4=sda4+"1110101"+Colaider3
 
 
-                                                            elif lenf>84 and lenf<89 and lenf!=0 and block==24 and PIt!="-1":
+                                                            elif lenf>84 and lenf<89 and lenf!=0 and block==24 and PI_take!="-1":
                                                             
                                                                 xc=88-lenf%88
                                                                 z=0
@@ -765,7 +705,7 @@ class compression:
                                                                 sda4=sda4+"1110110"+Colaider3
 
 
-                                                            elif lenf>88 and lenf<93 and lenf!=0 and block==25 and PIt!="-1":
+                                                            elif lenf>88 and lenf<93 and lenf!=0 and block==25 and PI_take!="-1":
                                                             
                                                                 xc=92-lenf%92
                                                                 z=0
@@ -780,7 +720,7 @@ class compression:
 
 
 
-                                                            elif lenf>92 and lenf<98 and lenf!=0 and block==26 and PIt!="-1":
+                                                            elif lenf>92 and lenf<98 and lenf!=0 and block==26 and PI_take!="-1":
                                                             
                                                                 xc=97-lenf%97
                                                                 z=0
@@ -793,7 +733,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1111000"+Colaider3
 
-                                                            elif lenf>97 and lenf<102 and lenf!=0 and block==27 and PIt!="-1":
+                                                            elif lenf>97 and lenf<102 and lenf!=0 and block==27 and PI_take!="-1":
                                                             
                                                                 xc=101-lenf%101
                                                                 z=0
@@ -806,7 +746,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1111001"+Colaider3
 
-                                                            elif lenf>101 and lenf<106 and lenf!=0 and block==28 and PIt!="-1":
+                                                            elif lenf>101 and lenf<106 and lenf!=0 and block==28 and PI_take!="-1":
                                                             
                                                                 xc=105-lenf%105
                                                                 z=0
@@ -819,7 +759,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1111010"+Colaider3
                                                                 
-                                                            elif lenf>105 and lenf<109 and lenf!=0 and block==29 and PIt!="-1":
+                                                            elif lenf>105 and lenf<109 and lenf!=0 and block==29 and PI_take!="-1":
                                                             
                                                                 xc=108-lenf%108
                                                                 z=0
@@ -832,7 +772,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1111011"+Colaider3
 
-                                                            elif lenf>108 and lenf<113 and lenf!=0 and block==30 and PIt!="-1":
+                                                            elif lenf>108 and lenf<113 and lenf!=0 and block==30 and PI_take!="-1":
                                                             
                                                                 xc=112-lenf%112
                                                                 z=0
@@ -845,7 +785,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1111100"+Colaider3
 
-                                                            elif lenf>112 and lenf<117 and lenf!=0 and block==31 and PIt!="-1":
+                                                            elif lenf>112 and lenf<117 and lenf!=0 and block==31 and PI_take!="-1":
                                                             
                                                                 xc=116-lenf%116
                                                                 z=0
@@ -859,7 +799,7 @@ class compression:
                                                                 sda4=sda4+"1111101"+Colaider3
 
 
-                                                            elif lenf>116 and lenf<121 and lenf!=0 and block==32 and PIt!="-1":
+                                                            elif lenf>116 and lenf<121 and lenf!=0 and block==32 and PI_take!="-1":
                                                             
                                                                 xc=120-lenf%120
                                                                 z=0
@@ -872,7 +812,7 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1111110"+Colaider3
 
-                                                            elif lenf>120 and lenf<125 and lenf!=0 and block==33 and PIt!="-1":
+                                                            elif lenf>120 and lenf<125 and lenf!=0 and block==33 and PI_take!="-1":
                                                             
                                                                 xc=124-lenf%124
                                                                 z=0
@@ -886,7 +826,7 @@ class compression:
                                                                 sda4=sda4+"1111111"+Colaider3
 
                                                                 
-                                                            elif lenf>124 and lenf<127 and lenf!=0 and block==34 and PIt!="-1":
+                                                            elif lenf>124 and lenf<127 and lenf!=0 and block==34 and PI_take!="-1":
                                                             
                                                                 xc=126-lenf%126
                                                                 z=0
@@ -981,17 +921,17 @@ class compression:
                                                     jl=binascii.unhexlify(qqwslenf % n)
                                                     sssssw=len(jl)
                                                     
-                                                    qqqwz=qqqwz+1
+                                                    Circle_times=Circle_times+1
                                                     szxzzza=""
                                                     szxzs=""
                                                     sda2=sda6
                                                     
-                                                    assxq=assxq+1
+                                                    Circle_times2=Circle_times2+1
                                                     
                                                     
-                                                    if assxq==20000:
-                                                        assx=10 
-                                                    if assx==10:        
+                                                    if Circle_times2==20000:
+                                                        END_working=10 
+                                                    if END_working==10:        
                                               
                                                         f2.write(jl)
                                                         x2 = time()
