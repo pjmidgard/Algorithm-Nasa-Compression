@@ -1,5 +1,4 @@
 from time import time
-cvf=0
 import os
 import binascii
 
@@ -62,8 +61,7 @@ class compression:
                     nac=len(nameas)
                     
                     Circle_times3=0
-                    cvf=2
-                    cvf1=0
+                    
                     s=""
                     
                     e2=0
@@ -366,8 +364,8 @@ class compression:
 
                                                                 Spin3=2
                                                                 
-                                                                ei4=ei4+17
-                                                                ei5=ei5+17
+                                                                ei4=ei4+14
+                                                                ei5=ei5+14
                                                                 Spin=0
 
                                                             if Spin3==2:
@@ -461,32 +459,32 @@ class compression:
 
                                             Spin=1
                                             bits="1100"
-                                            ii=3
+                                            ii=4
                                                             
                                                           
                                         if lenf<=2 and block==2 and lenf_bits<=7 and xe!=-1:
                                                             
                                             Spin=1
                                             bits="1101"
-                                            ii=6
+                                            ii=7
                                                            
                                         if lenf<=3 and block==3 and lenf_bits<=10 and xe!=-1:
                                                             
                                             Spin=1
                                             bits="1110"
-                                            ii=9
+                                            ii=10
                                                                 
                                         if lenf<=4 and block==4 and lenf_bits<=14 and xe!=-1:
                                                             
                                             Spin=1
                                             bits="1110"
-                                            ii=13
+                                            ii=14
                                                                
                                         if lenf<=5 and block==5 and lenf_bits<=17 and xe!=-1:
                                                             
                                             Spin=1
                                             bits="10"
-                                            ii=16
+                                            ii=17
                                                      
                                                                 
                                         if lenf>=6 and block>=6 and xe!=-1 or lenf_bits>17 and xe!=-1 or lenf<=5 and block<=5 and lenf_bits>17 and xe!=-1:
