@@ -217,7 +217,13 @@ class compression:
                                         
                                         block2=0
                                         ei4=0
-                                        ei5=6
+                                        ei5=19
+
+                                        eie4=0
+                                        eie5=4
+
+                                        eit4=0
+                                        eit5=2
 
                                         eig4=0
                                         eig5=1
@@ -232,22 +238,28 @@ class compression:
                                         e4l=sda3[ei4:ei4+32]
                                         e4l=int(e4l, 2)
 
-                                        sda3=sda3[32:]
+                                        sda3=sda3[40:]
+                                        lenf5=len(sda3)
 
-                                        sda3c=sda3[:e4l]
-                                        sda3=sda3[e4l:]
+                                        
                                         Spin2=0
 
                                         
 
                                         
         
-                                        while ei5<lenf5+32:
-                                                            e4b=sda3[ei4:ei4+6]
+                                        while ei5<lenf5+19:
+                                                            Slot_16=sda3[ei4:ei4+16]#Slot 16
+                                                            Slot_4_bits=sda3[ei4:ei4+4]#Slot 4
+                                                            Slot_2_bits=sda3[ei4:ei4+2]#Slot 2
+                                                            Slot_1a_bits=sda3[ei4:ei4+3]#Slot a 1100
+                                                            Slot_1b_bits=sda3[ei4:ei4+6]#Slot a 1101
+                                                            Slot_1c_bits=sda3[ei4:ei4+9]#Slot a 1110
+                                                            Slot_1d_bits=sda3[ei4:ei4+13]#Slot a 1111
                                                             e4=sda3[ei4:ei5]
                                                             e4a=sda3[ei4:ei5]
                                                             e4h=sda3c[eig4:eig5]
-                                                          
+                                                        
                                                             yu=len(e4)
 
                                                             szx=""
@@ -265,51 +277,86 @@ class compression:
                                                                             
                                                             Colaider3=szx+Colaider3
                                                            
-                                                            if block2==16:
+                                                            if Spin==0:
+                                                                eig4=eig4+1
+                                                                eig5=eig5+1
                                                                 
-                                                                
-                                                                block2=0
-                                                                Specktr=0
-                                                                Spin=0
-                                                                
-                                                        
-                                                                block3=0
-                                                                Spin2=0
-                                                            
-                                                            if Spin2==1 and block2==15:
-                                                                Specktr=1
-                                                            
-                                                            
-                                                                sda4=sda4+Colaider3
-                                                                
-                                                              
-
-                                                            if Spin2==0:
-                                                                ei4=ei4+1
-                                                                ei5=ei5+1
-                                                                if e4h=="1":
-                                                                    Spin2=1
-                                                                    block2=0
-                                                                    block3=0
-                                                                    Spin=1
-                                                                    Spin2=0
-
                                                                 if e4h=="0":
+                                                                    ei4=ei4+1
+                                                                    ei5=ei5+1
+                                                                   
+                                                                    Spin=1
+
+                                                                if e4h=="1":
+                                                                    ei4=ei4-1
+                                                                    ei5=ei5-1
                                                                     
-                                                                    sda4=sda4+e4
-                                                                    block2=block2+1
-                                                                    block3=block3+1
-                                                                    
-                                                            else:
+                                                                    if Slot_2_bits=="10":
+                                                                        Spin=2
+                                                                        ei4=ei4+2
+                                                                        ei5=ei5+2
+
+                                                                    if e4t=="11":
+                                                                        
+                                                                        if Slot_4_bits=="1100" and Spin2==0:
+                                                                            Spin2=1
+                                                                            Spin=3
+
+                                                                        if Slot_4_bits=="1101" and Spin2==0:
+                                                                            Spin=4
+                                                                            Spin2=1
+
+                                                                        if Slot_4_bits=="1110" and Spin2==0:
+                                                                            Spin=5
+                                                                            Spin2=1
+
+                                                                        if Slot_4_bits=="1111" and Spin2==0:
+                                                                            Spin=6
+                                                                            Spin2=1
+
+                                                            # Spin: of varation corridors
+
+                                                            if Spin2==1:
+                                                                ei4=ei4+4
+                                                                ei5=ei5+4
+                                                                Spin2=0
+                                                                
+                                                            if Spin==1 and Spin2==0:
                                                                 sda4=sda4+e4
-                                                                block2=block2+1
-                                                                block3=block3+1
+                                                                Spin=0
+
+                                                            if Spin==2 and Spin2==0:
+                                                                sda4=sda4+Slot_16
+                                                                ei4=ei4+16
+                                                                ei5=ei5+16
+                                                                Spin=0
+
+                                                            if Spin==3 and Spin2==0:
+                                                                sda4=sda4+Slot_1b_bits
+                                                                ei4=ei4+3
+                                                                ei5=ei5+3
+                                                                Spin=0
+
+                                                            if Spin==4 and Spin2==0:
+                                                                sda4=sda4+Slot_1b_bits
+                                                                ei4=ei4+6
+                                                                ei5=ei5+6
+                                                                Spin=0
+
+                                                            if Spin==5 and Spin2==0:
+                                                                sda4=sda4+Slot_1c_bits
+                                                                ei4=ei4+9
+                                                                ei5=ei5+9
+                                                                Spin=0
 
                                                             
-                                                            
-                                                            ei4=ei4+6
-                                                            ei5=ei5+6
-
+                                                            if Spin==6 and Spin2==0:
+                                                                sda4=sda4+Slot_1d_bits
+                                                                ei4=ei4+13
+                                                                ei5=ei5+13
+                                                                Spin=0
+                                                               
+                                                    
                                     e4=""
                                     e4a=""
                                     e4b=""
