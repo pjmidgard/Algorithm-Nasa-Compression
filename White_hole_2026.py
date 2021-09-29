@@ -68,15 +68,11 @@ class compression:
                     ei5=7
                     
                     e4=""
-                    
-                    c=2
-                    sw=2
-                    elw=0
                  
                     sda3=""
                     sda2=""
 
-                    block=1
+                    block=0
                     block2=0
                     block3=0
                     
@@ -207,6 +203,8 @@ class compression:
                                         eig5=1
                                         
                                         Spin=0
+                                        Spin3=0
+                                        Spin2=0
                                         sda3=sda2
                                         ei5=6
                                         block3=0
@@ -214,10 +212,6 @@ class compression:
                                         sda3c=""
 
                                         lenf5=len(sda3)
-
-                                        Spin3=0
-
-                                        Spin2=0
 
                                         while ei5<=lenf5:
                                                             Slot_16=sda3[ei4:ei4+16]#Slot 16
@@ -392,23 +386,8 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+Colaider3
                                                                 Spin3=0
-                                                                
-                                    
-                                    e4=""
-                                    e4a=""
-                                    e4b=""
-                                    block2=0
-                                    sda5=""
-                                    
-                                   
-                                lenf6=len(sda4)
-                                lenf8=len(sda2)
-                                                            
-                                e2=e2+1
-                                e3=e3+1
-
-                                e4=""
-  
+                              
+                                  
                                 if i==1:
                                     Spin=0
                                     sda3=sda2
@@ -418,7 +397,6 @@ class compression:
                                     block3=0
                                     Colaider3=""
                                     block2=0
-                                    block3=0
 
                                     while ei5<lenf6+20:
                                         e4b=sda3[ei4:ei4+6]
