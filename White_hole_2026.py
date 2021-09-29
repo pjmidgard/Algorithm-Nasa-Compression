@@ -16,7 +16,7 @@ class compression:
                 
     def cryptograpy_compression(self):
                 
-                self.name = "Written: Jurijus pacalovas Date: 29/09/2021 17:46"
+                self.name = "Written: Jurijus pacalovas Date: 29/09/2021 18:05"
                 
                 if namez=="c" or namez=="e":
                     if namez=="c":
@@ -474,7 +474,7 @@ class compression:
                                                             
                                             Spin=1
                                             bits="1110"
-                                            ii=9
+                                            ii=10
                                                                 
                                         if lenf<=4 and block==4 and lenf_bits<=14 and xe!=-1:
                                                             
@@ -567,7 +567,7 @@ class compression:
                                                     
                                         Circle_times2=Circle_times2+1
                                                     
-                                        if Circle_times2==200:
+                                        if Circle_times2==20:
                                             END_working=10 
                                         if END_working==10:        
                                               
