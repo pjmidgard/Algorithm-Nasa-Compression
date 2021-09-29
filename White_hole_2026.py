@@ -68,7 +68,6 @@ class compression:
                     ei4=0
                     ei5=7
                     
-                    
                     e4=""
                     
                     c=2
@@ -82,8 +81,6 @@ class compression:
                     block2=0
                     block3=0
                     
-                    
-
                     x=0
                     x1=0
                     x2=0
@@ -106,9 +103,7 @@ class compression:
                         END_working=0
                         Circle_times=0
                         Circle_times2=0
-
-
-                       
+                        
                         while END_working<10:
                        
                             aas1=0
@@ -169,16 +164,12 @@ class compression:
                                     lenf3=len(sda2)
                                 lenf2=len(sda2)
                                 
-                                    
-                                     
                                 block2=0
                                 if i==2:
-
                                     
                                     sda2=sda2[1:]
                                     lenf5=len(sda3)
                                     g=1
-
 
                                     if g==1:
 
@@ -298,16 +289,13 @@ class compression:
                                                                 ei4=ei4+4
                                                                 ei5=ei5+4
 
-    
                                                                 f = open("PI_10M.txt", "r")
                                                                 PI=f.read()
 
                                                                 block3 = int(e4, 2) # Take block of the file
                                                         
-                                                           
                                                                 szx=""
 
-                                                            
                                                                 block3=str(block3)
 
                                                                 block=len(block3)
@@ -422,20 +410,18 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+Colaider3
                                                                 Spin3=0
-
-                                                                              
+                                                                
+                                    
                                     e4=""
                                     e4a=""
                                     e4b=""
                                     block2=0
                                     sda5=""
                                     cvf1=1
-
                                    
                                 lenf6=len(sda4)
                                 lenf8=len(sda2)
-                                   
-                                                                
+                                                            
                                 e2=e2+1
                                 e3=e3+1
 
@@ -485,11 +471,9 @@ class compression:
                                                             lenf_bits=len(PI_take_long)
 
                                                             if xe==-1:
-
                                                 
                                                                 sda4=sda4+"0"+e4
                                                                
-
                                                             elif lenf<=1 and block==1 and lenf_bits<=3:
                                                             
                                                                 xc=3-lenf%3
@@ -504,8 +488,6 @@ class compression:
                                                                
                                                                 sda4=sda4+"1100"+Colaider3
                                                                 
-                                                                
-
                                                             elif lenf<=2 and block==2 and lenf_bits<=6:
                                                             
                                                                 xc=6-lenf%6
@@ -519,9 +501,6 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1101"+Colaider3
                                                                
-                                                                
-                                                             
-                                                            
                                                             elif lenf<=3 and block==3 and lenf_bits<=9:
                                                             
                                                                 xc=9-lenf%9
@@ -535,8 +514,6 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1110"+Colaider3
                                                                 
-                                                               
-
                                                             elif lenf<=4 and block==4 and lenf_bits<=13:
                                                             
                                                                 xc=13-lenf%13
@@ -550,7 +527,6 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"1111"+Colaider3
                                                                
-
                                                             elif lenf<=5 and block==5 and lenf_bits<=16:
                                                             
                                                                 xc=16-lenf%16
@@ -564,7 +540,6 @@ class compression:
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+"10"+Colaider3
                                                                 
-                                                             
                                                             elif lenf>=6 and block>=6:
                                                                  
                                                                 sda4=sda4+"0"+e4
@@ -574,7 +549,6 @@ class compression:
                                         
                                     szx=""
 
-                                     
                                     sda6=""
 
                                     sda4f=len(sda4)
@@ -598,8 +572,6 @@ class compression:
                                     Spinh=0              
                                     block2=0
                                 
-
-                                    
                                     e4=""
                                     e4a=""
                                     e4b=""
@@ -646,7 +618,6 @@ class compression:
                                                     sda2=sda6
                                                     
                                                     Circle_times2=Circle_times2+1
-                                                    
                                                     
                                                     if Circle_times2==1:
                                                         END_working=10 
