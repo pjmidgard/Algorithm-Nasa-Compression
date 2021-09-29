@@ -617,7 +617,7 @@ class compression:
                                                     
                                                     Circle_times2=Circle_times2+1
                                                     
-                                                    if Circle_times2==2000:
+                                                    if Circle_times2==1:
                                                         END_working=10 
                                                     if END_working==10:        
                                               
