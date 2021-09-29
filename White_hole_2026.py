@@ -110,6 +110,11 @@ class compression:
                         
                         while END_working<10:
                        
+                            aas1=0
+                            a1=0
+
+                            cvf=cvf+1
+                            
                             Circle_times3=Circle_times3+1
 
                             with open(nameas, "ab") as f2:
@@ -168,35 +173,38 @@ class compression:
                                     
                                     sda2=sda2[1:]
                                     lenf5=len(sda3)
-                                   
-                                    if sda2[lenf5-8:lenf5]=="10000000":
+                                    g=1
 
-                                        sda2=sda2[:lenf5-8]
+                                    if g==1:
 
-                                    elif sda2[lenf5-7:lenf5]=="1000000":
+                                        if sda2[lenf5-8:lenf5]=="10000000":
 
-                                        sda2=sda2[:lenf5-7]
+                                            sda2=sda2[:lenf5-8]
 
-                                    elif sda2[lenf5-6:lenf5]=="100000":
+                                        elif sda2[lenf5-7:lenf5]=="1000000":
 
-                                        sda2=sda2[:lenf5-6]
+                                            sda2=sda2[:lenf5-7]
 
-                                    elif sda2[lenf5-5:lenf5]=="10000":
+                                        elif sda2[lenf5-6:lenf5]=="100000":
 
-                                        sda2=sda2[:lenf5-5]
+                                            sda2=sda2[:lenf5-6]
+
+                                        elif sda2[lenf5-5:lenf5]=="10000":
+
+                                            sda2=sda2[:lenf5-5]
 
 
-                                    elif sda2[lenf5-3:lenf5]=="100":
+                                        elif sda2[lenf5-3:lenf5]=="100":
 
-                                        sda2=sda2[:lenf5-3]
+                                            sda2=sda2[:lenf5-3]
 
-                                    elif sda2[lenf5-2:lenf5]=="10":
+                                        elif sda2[lenf5-2:lenf5]=="10":
 
-                                        sda2=sda2[:lenf5-2]
+                                            sda2=sda2[:lenf5-2]
 
-                                    elif sda2[lenf5-1:lenf5]=="1":
+                                        elif sda2[lenf5-1:lenf5]=="1":
 
-                                        sda2=sda2[:lenf5-1]
+                                            sda2=sda2[:lenf5-1]
 
                                         
                                         lenf5=len(sda2)
@@ -408,7 +416,7 @@ class compression:
                                     e4b=""
                                     block2=0
                                     sda5=""
-                                    
+                                    cvf1=1
                                    
                                 lenf6=len(sda4)
                                 lenf8=len(sda2)
@@ -417,102 +425,123 @@ class compression:
                                 e3=e3+1
 
                                 e4=""
-  
-                                if i==1:
-                                    Spin=0
-                                    sda3=sda2
-                                    lenf6=len(sda3)
-                                    ei4=0
-                                    ei5=19
-                                    block3=0
-                                    Colaider3=""
-                                    block2=0
-                                    block3=0
 
-                                    while ei5<lenf6+19:
-                                        e4b=sda3[ei4:ei4+6]
-                                        e4=sda3[ei4:ei5]
-                                        e4a=sda3[ei4:ei5]
-                                        yu=len(e4)
-
-                                        block3 = int(e4, 2) # Take block of the file
-                                                        
-                                        szx=""
- 
-                                        block3=str(block3)
-
-                                        block=len(block3)
-                                                           
-                                        PI_take=str(PI)
-                                                            
-                                        xe = PI_take.find(block3)
-
-                                        PI_take_long=str(xe)
-                                        lenf=len(PI_take_long)
-                                                            
-                                        Colaider3=bin(xe)[2:]
-                                        lenf_bits=len(PI_take_long)
-
-                                        if xe==-1:
-                                                
-                                            sda4=sda4+"0"+e4
-                                                               
-                                        elif lenf<=1 and block==1 and lenf_bits<=3 and Spin==0:
-
-                                            Spin=1
-                                            bits="1100"
-                                            ii=3
-                                                            
-                                                          
-                                        elif lenf<=2 and block==2 and lenf_bits<=6 and Spin==0:
-                                                            
-                                            Spin=1
-                                            bits="1101"
-                                            ii=6
-                                                           
-                                        elif lenf<=3 and block==3 and lenf_bits<=9 and Spin==0:
-                                                            
-                                            Spin=1
-                                            bits="1110"
-                                            ii=9
-                                                                
-                                        elif lenf<=4 and block==4 and lenf_bits<=13 and Spin==0:
-                                                            
-                                            Spin=1
-                                            bits="1110"
-                                            ii=13
-                                                               
-                                        elif lenf<=5 and block==5 and lenf_bits<=16 and Spin==0:
-                                                            
-                                            Spin=1
-                                            bits="10"
-                                            ii=16
-                                                     
-                                                                
-                                        elif lenf>=6 and block>=6:
-                                                                 
-                                                sda4=sda4+"0"+e4
-                                                            
-                                                ei4=ei4+19
-                                                ei5=ei5+19
-
-                                        if Spin==1:
-
-                                                xc=ii-lenf%ii
-                                                z=0
-                                                if xc!=0:
-                                                    if xc!=ii:
-                                                        while z<xc:
-                                                            szx="0"+szx
-                                                            z=z+1
-                                                                                            
-                                                Colaider3=szx+Colaider3
-                                                                   
-                                                sda4=sda4+Spin+Colaider3
-                                                Colaider3=""
+                                cvf1=1
+                                if cvf1==1:
+                                    
+                                    if i==1:
                                                 Spin=0
+                                                sda3=sda2
+                                                lenf6=len(sda3)
+                                                ei4=0
+                                                ei5=19
+                                                block3=0
+                                                Colaider3=""
+                                                block2=0
+                                                block3=0
 
+                                                while ei5<lenf6+19:
+                                                            e4b=sda3[ei4:ei4+6]
+                                                            e4=sda3[ei4:ei5]
+                                                            e4a=sda3[ei4:ei5]
+                                                            yu=len(e4)
+
+                                                            block3 = int(e4, 2) # Take block of the file
+                                                        
+                                                            szx=""
+
+                                                            
+                                                            block3=str(block3)
+
+                                                            block=len(block3)
+                                                           
+                                                            PI_take=str(PI)
+                                                            
+
+                                                            xe = PI_take.find(block3)
+
+                                                            PI_take_long=str(xe)
+                                                            lenf=len(PI_take_long)
+                                                            
+                                                            Colaider3=bin(xe)[2:]
+                                                            lenf_bits=len(PI_take_long)
+
+                                                            if xe==-1:
                                                 
+                                                                sda4=sda4+"0"+e4
+                                                               
+                                                            elif lenf<=1 and block==1 and lenf_bits<=3:
+                                                            
+                                                                xc=3-lenf%3
+                                                                z=0
+                                                                if xc!=0:
+                                                                    if xc!=3 and xc!=0:
+                                                                        while z<xc:
+                                                                            szx="0"+szx
+                                                                            z=z+1
+                                                                                        
+                                                                Colaider3=szx+Colaider3
+                                                               
+                                                                sda4=sda4+"1100"+Colaider3
+                                                                
+                                                            elif lenf<=2 and block==2 and lenf_bits<=6:
+                                                            
+                                                                xc=6-lenf%6
+                                                                z=0
+                                                                if xc!=0:
+                                                                    if xc!=6 and xc!=0:
+                                                                        while z<xc:
+                                                                            szx="0"+szx
+                                                                            z=z+1
+                                                                                        
+                                                                Colaider3=szx+Colaider3
+                                                                sda4=sda4+"1101"+Colaider3
+                                                               
+                                                            elif lenf<=3 and block==3 and lenf_bits<=9:
+                                                            
+                                                                xc=9-lenf%9
+                                                                z=0
+                                                                if xc!=0:
+                                                                    if xc!=9 and xc!=0:
+                                                                        while z<xc:
+                                                                            szx="0"+szx
+                                                                            z=z+1
+                                                                                        
+                                                                Colaider3=szx+Colaider3
+                                                                sda4=sda4+"1110"+Colaider3
+                                                                
+                                                            elif lenf<=4 and block==4 and lenf_bits<=13:
+                                                            
+                                                                xc=13-lenf%13
+                                                                z=0
+                                                                if xc!=0:
+                                                                    if xc!=13 and xc!=0:
+                                                                        while z<xc:
+                                                                            szx="0"+szx
+                                                                            z=z+1
+                                                                                        
+                                                                Colaider3=szx+Colaider3
+                                                                sda4=sda4+"1111"+Colaider3
+                                                               
+                                                            elif lenf<=5 and block==5 and lenf_bits<=16:
+                                                            
+                                                                xc=16-lenf%16
+                                                                z=0
+                                                                if xc!=0:
+                                                                    if xc!=16 and xc!=0:
+                                                                        while z<xc:
+                                                                            szx="0"+szx
+                                                                            z=z+1
+                                                                                        
+                                                                Colaider3=szx+Colaider3
+                                                                sda4=sda4+"10"+Colaider3
+                                                                
+                                                            elif lenf>=6 and block>=6:
+                                                                 
+                                                                sda4=sda4+"0"+e4
+                                                            
+                                                            ei4=ei4+19
+                                                            ei5=ei5+19
                                         
                                     szx=""
 
@@ -545,52 +574,55 @@ class compression:
                                     block2=0
                                     sda5=""
                                      
-                                    if i==2:
-                                        wer=""
-                                        szx=""
-                                        wer=sda4
+                                    cvf1=1
+                                                
+                                    if cvf1==1:
+                                                    if i==2:
+                                                        wer=""
+                                                        szx=""
+                                                        wer=sda4
 
-                                    if i==1:
-                                        wer=""
-                                        wer=sda6
-                                        sda4=""
-                                        szx=""
+                                                    if i==1:
+                                                        wer=""
+                                                        wer=sda6
+                                                        sda4=""
+                                                        szx=""
 
-                                        wer="0"+wer+"1"
-                                        lenf=len(wer)
+                                                        wer="0"+wer+"1"
+                                                        lenf=len(wer)
                                                         
-                                        xc=8-lenf%8
-                                        z=0
-                                        if xc!=0:
-                                            if xc!=8:
-                                                while z<xc:
-                                                    szx="0"+szx
-                                                    z=z+1
-                                        wer=wer+szx
+                                                        xc=8-lenf%8
+                                                        z=0
+                                                        if xc!=0:
+                                                            if xc!=8:
+                                                                while z<xc:
+                                                                    szx="0"+szx
+                                                                    z=z+1
+                                                        wer=wer+szx
                                                                                     
-                                        n = int(wer, 2)
-                                        qqwslenf=len(wer)
-                                        qqwslenf=(qqwslenf/8)*2
-                                        qqwslenf=str(qqwslenf)
-                                        qqwslenf="%0"+qqwslenf+"x"
-                                        jl=binascii.unhexlify(qqwslenf % n)
-                                        sssssw=len(jl)
+                                                    n = int(wer, 2)
+                                                    qqwslenf=len(wer)
+                                                    qqwslenf=(qqwslenf/8)*2
+                                                    qqwslenf=str(qqwslenf)
+                                                    qqwslenf="%0"+qqwslenf+"x"
+                                                    jl=binascii.unhexlify(qqwslenf % n)
+                                                    sssssw=len(jl)
                                                     
-                                        Circle_times=Circle_times+1
-                                        szxzzza=""
-                                        szxzs=""
-                                        sda2=sda6
+                                                    Circle_times=Circle_times+1
+                                                    szxzzza=""
+                                                    szxzs=""
+                                                    sda2=sda6
                                                     
-                                        Circle_times2=Circle_times2+1
+                                                    Circle_times2=Circle_times2+1
                                                     
-                                        if Circle_times2==200:
-                                            END_working=10 
-                                        if END_working==10:        
+                                                    if Circle_times2==200:
+                                                        END_working=10 
+                                                    if END_working==10:        
                                               
-                                            f2.write(jl)
-                                            x2 = time()
-                                            x3=x2-x
-                                            return print(x3)
+                                                        f2.write(jl)
+                                                        x2 = time()
+                                                        x3=x2-x
+                                                        return print(x3)
 
 d=compression()
 
