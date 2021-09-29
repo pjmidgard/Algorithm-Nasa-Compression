@@ -401,8 +401,7 @@ class compression:
                                             
                                                                 Colaider3=bin(block3)[2:]
                                                                 lenf=len(Colaider3)
-
-
+                                                                
                                                                 xc2=lenf5-ei5
                                                                 if xc2<=19:
 
