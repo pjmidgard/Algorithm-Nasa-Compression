@@ -235,22 +235,14 @@ class compression:
                                         Colaider3=""
                                         sda3c=""
 
-                                        e4l=sda3[ei4:ei4+32]
-                                        e4l=int(e4l, 2)
-
                                         sda3=sda3[40:]
                                         lenf5=len(sda3)
 
                                         Spin3=0
 
-                                        
                                         Spin2=0
 
-                                        
-
-                                        
-        
-                                        while ei5<lenf5+19:
+                                        while ei5<=lenf5:
                                                             Slot_16=sda3[ei4:ei4+16]#Slot 16
                                                             Slot_4_bits=sda3[ei4:ei4+4]#Slot 4
                                                             Slot_2_bits=sda3[ei4:ei4+2]#Slot 2
@@ -409,15 +401,28 @@ class compression:
                                             
                                                                 Colaider3=bin(block3)[2:]
                                                                 lenf=len(Colaider3)
-                                                                 
-                                                                xc=19-lenf%19
-                                                                z=0
-                                                                if xc!=0:
-                                                                    if xc!==19:
-                                                                        while z<xc:
-                                                                            szx="0"+szx
-                                                                            z=z+1
-                                                                                
+
+
+                                                                xc2=lenf5-ei5
+                                                                if xc2<=19:
+
+                                                                    xc=xc2-lenf%xc2
+                                                                    z=0
+                                                                    if xc!=0:
+                                                                        if xc!==xc2:
+                                                                            while z<xc:
+                                                                                szx="0"+szx
+                                                                                z=z+1
+
+                                                                else:
+                                                                    xc=19-lenf%19
+                                                                    z=0
+                                                                    if xc!=0:
+                                                                        if xc!==19:
+                                                                            while z<xc:
+                                                                                szx="0"+szx
+                                                                                z=z+1
+
                                                                 Colaider3=szx+Colaider3
                                                                 sda4=sda4+Colaider3
                                                                 Spin3=0
