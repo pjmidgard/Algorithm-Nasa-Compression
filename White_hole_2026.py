@@ -442,7 +442,7 @@ class compression:
                                                 f = open("PI_10M.txt", "r")
                                                 PI=f.read()
                                                 
-                                                while ei5<lenf5*8+19:
+                                                while ei5<lenf6+19:
                                                             e4b=sda3[ei4:ei4+6]
                                                             e4=sda3[ei4:ei5]
                                                             e4a=sda3[ei4:ei5]
@@ -617,7 +617,7 @@ class compression:
                                                     
                                                     Circle_times2=Circle_times2+1
                                                     
-                                                    if Circle_times2==1:
+                                                    if Circle_times2==2000:
                                                         END_working=10 
                                                     if END_working==10:        
                                               
