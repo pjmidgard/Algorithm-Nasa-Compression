@@ -373,9 +373,8 @@ class compression:
                                                             PI_take_long=str(xe)
                                                             lenf=len(PI_take_long)
                                                             
-                                                           
-                                                            
                                                             Colaider3=bin(xe)[2:]
+                                                            lenf_bits=len(PI_take_long)
 
                                                             if xe==-1:
 
@@ -383,12 +382,12 @@ class compression:
                                                                 sda4=sda4+"0"+e4
                                                                
 
-                                                            elif lenf<=1 and block==1:
+                                                            elif lenf<=1 and block==1 and lenf_bits<=3:
                                                             
                                                                 xc=3-lenf%3
                                                                 z=0
                                                                 if xc!=0:
-                                                                    if xc!=3:
+                                                                    if xc!=3 and xc!=0:
                                                                         while z<xc:
                                                                             szx="0"+szx
                                                                             z=z+1
@@ -399,12 +398,12 @@ class compression:
                                                                 
                                                                 
 
-                                                            elif lenf<=2 and block==2:
+                                                            elif lenf<=2 and block==2 and lenf_bits<=6:
                                                             
                                                                 xc=6-lenf%6
                                                                 z=0
                                                                 if xc!=0:
-                                                                    if xc!=6:
+                                                                    if xc!=6 and xc!=0:
                                                                         while z<xc:
                                                                             szx="0"+szx
                                                                             z=z+1
@@ -415,12 +414,12 @@ class compression:
                                                                 
                                                              
                                                             
-                                                            elif lenf<=3 and block==3:
+                                                            elif lenf<=3 and block==3 and lenf_bits<=9:
                                                             
                                                                 xc=9-lenf%9
                                                                 z=0
                                                                 if xc!=0:
-                                                                    if xc!=9:
+                                                                    if xc!=9 and xc!=0:
                                                                         while z<xc:
                                                                             szx="0"+szx
                                                                             z=z+1
@@ -430,12 +429,12 @@ class compression:
                                                                 
                                                                
 
-                                                            elif lenf<=4 and block==4:
+                                                            elif lenf<=4 and block==4 and lenf_bits<=13:
                                                             
                                                                 xc=13-lenf%13
                                                                 z=0
                                                                 if xc!=0:
-                                                                    if xc!=13:
+                                                                    if xc!=13 and xc!=0:
                                                                         while z<xc:
                                                                             szx="0"+szx
                                                                             z=z+1
@@ -444,12 +443,12 @@ class compression:
                                                                 sda4=sda4+"1111"+Colaider3
                                                                
 
-                                                            elif lenf<=5 and block==5:
+                                                            elif lenf<=5 and block==5 and lenf_bits<=16:
                                                             
                                                                 xc=16-lenf%16
                                                                 z=0
                                                                 if xc!=0:
-                                                                    if xc!=16:
+                                                                    if xc!=16 and xc!=0:
                                                                         while z<xc:
                                                                             szx="0"+szx
                                                                             z=z+1
@@ -476,10 +475,10 @@ class compression:
                                     
                                     Colaider3=bin(sda4f)[2:]
                                     lenf=len(Colaider3)
-                                    xc=13-lenf%13
+                                    xc=40-lenf%40
                                     z=0
                                     if xc!=0:
-                                        if xc!=13:
+                                        if xc!=40 and xc!=0:
                                             while z<xc:
                                                 szx="0"+szx
                                                 z=z+1
