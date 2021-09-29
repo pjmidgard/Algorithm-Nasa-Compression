@@ -3,10 +3,6 @@ cvf=0
 import os
 import binascii
 
-#import mpmath as m
-#m.mp.dps = 100000
-#PI=4 * m.atan(1)
-
 Circle_times=0
 END_working=0
 lenf=0
@@ -27,6 +23,14 @@ class compression:
                         i=1
                     if namez=="e":
                         i=2
+                    
+                    #import mpmath as m
+                    #m.mp.dps = 100000
+                    #PI=4 * m.atan(1)
+
+                    f = open("PI_10M.txt", "r")
+                    PI=f.read()
+
 
                     sda4=""
                     sda5=""
@@ -289,9 +293,6 @@ class compression:
                                                                 ei4=ei4+4
                                                                 ei5=ei5+4
 
-                                                                f = open("PI_10M.txt", "r")
-                                                                PI=f.read()
-
                                                                 block3 = int(e4, 2) # Take block of the file
                                                         
                                                                 szx=""
@@ -439,9 +440,6 @@ class compression:
                                                 block2=0
                                                 block3=0
 
-                                                f = open("PI_10M.txt", "r")
-                                                PI=f.read()
-                                                
                                                 while ei5<lenf6+19:
                                                             e4b=sda3[ei4:ei4+6]
                                                             e4=sda3[ei4:ei5]
