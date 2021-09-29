@@ -203,7 +203,7 @@ class compression:
                                         
                                         block2=0
                                         ei4=0
-                                        ei5=19
+                                        ei5=1
 
                                         eie4=0
                                         eie5=4
@@ -389,10 +389,10 @@ class compression:
                                                                                 z=z+1
 
                                                                 else:
-                                                                    xc=19-lenf%19
+                                                                    xc=20-lenf%20
                                                                     z=0
                                                                     if xc!=0:
-                                                                        if xc!=19:
+                                                                        if xc!=20:
                                                                             while z<xc:
                                                                                 szx="0"+szx
                                                                                 z=z+1
@@ -422,7 +422,7 @@ class compression:
                                     sda3=sda2
                                     lenf6=len(sda3)
                                     ei4=0
-                                    ei5=19
+                                    ei5=20
                                     block3=0
                                     Colaider3=""
                                     block2=0
@@ -457,39 +457,39 @@ class compression:
                                                 
                                             sda4=sda4+"0"+e4
                                                          
-                                        if lenf<=1 and block==1 and lenf_bits<=3 and xe!=-1:
+                                        if lenf<=1 and block==1 and lenf_bits<=4 and xe!=-1:
 
                                             Spin=1
                                             bits="1100"
                                             ii=3
                                                             
                                                           
-                                        if lenf<=2 and block==2 and lenf_bits<=6 and xe!=-1:
+                                        if lenf<=2 and block==2 and lenf_bits<=7 and xe!=-1:
                                                             
                                             Spin=1
                                             bits="1101"
                                             ii=6
                                                            
-                                        if lenf<=3 and block==3 and lenf_bits<=9 and xe!=-1:
+                                        if lenf<=3 and block==3 and lenf_bits<=10 and xe!=-1:
                                                             
                                             Spin=1
                                             bits="1110"
                                             ii=9
                                                                 
-                                        if lenf<=4 and block==4 and lenf_bits<=13 and xe!=-1:
+                                        if lenf<=4 and block==4 and lenf_bits<=14 and xe!=-1:
                                                             
                                             Spin=1
                                             bits="1110"
                                             ii=13
                                                                
-                                        if lenf<=5 and block==5 and lenf_bits<=16 and xe!=-1:
+                                        if lenf<=5 and block==5 and lenf_bits<=17 and xe!=-1:
                                                             
                                             Spin=1
                                             bits="10"
                                             ii=16
                                                      
                                                                 
-                                        if lenf>=6 and block>=6 and xe!=-1 or lenf_bits>16 and xe!=-1 or lenf<=5 and block<=5 and lenf_bits>16 and xe!=-1:
+                                        if lenf>=6 and block>=6 and xe!=-1 or lenf_bits>17 and xe!=-1 or lenf<=5 and block<=5 and lenf_bits>17 and xe!=-1:
                                                                  
                                             sda4=sda4+"0"+e4
                                            
@@ -509,8 +509,8 @@ class compression:
                                                 Colaider3=""
                                                 Spin=0
 
-                                        ei4=ei4+19
-                                        ei5=ei5+19
+                                        ei4=ei4+20
+                                        ei5=ei5+20
                                         
                                     szx=""
 
