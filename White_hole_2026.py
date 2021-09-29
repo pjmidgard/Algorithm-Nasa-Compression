@@ -241,6 +241,8 @@ class compression:
                                         sda3=sda3[40:]
                                         lenf5=len(sda3)
 
+                                        Spin3=0
+
                                         
                                         Spin2=0
 
@@ -262,20 +264,7 @@ class compression:
                                                         
                                                             yu=len(e4)
 
-                                                            szx=""
-
-                                                            Colaider3=bin(block3)[2:]
-                                                            lenf=len(Colaider3)
-                                                             
-                                                            xc=6-lenf%6
-                                                            z=0
-                                                            if xc!=0:
-                                                                if xc!=6:
-                                                                    while z<xc:
-                                                                        szx="0"+szx
-                                                                        z=z+1
-                                                                            
-                                                            Colaider3=szx+Colaider3
+                                                            
                                                            
                                                             if Spin==0:
                                                                 eig4=eig4+1
@@ -319,6 +308,23 @@ class compression:
                                                             if Spin2==1:
                                                                 ei4=ei4+4
                                                                 ei5=ei5+4
+
+    
+                                                                f = open("PI_10M.txt", "r")
+                                                                PI=f.read()
+
+                                                                block3 = int(e4, 2) # Take block of the file
+                                                        
+                                                           
+                                                                szx=""
+
+                                                            
+                                                                block3=str(block3)
+
+                                                                block=len(block3)
+                                                           
+                                                                PI_take=str(PI)
+
                                                                 Spin2=0
                                                                 
                                                             if Spin==1 and Spin2==0:
@@ -326,36 +332,97 @@ class compression:
                                                                 Spin=0
 
                                                             if Spin==2 and Spin2==0:
-                                                                sda4=sda4+Slot_16
+                                                                #Slot_16
+                                                                block3g = int(Slot_16, 2)
+                                                                
+                                                                PI_take_read=PI_take[block3g:block3g+5]
+                                                                Colaider3=PI_take_read
+
+                                                                Spin3=2
+
                                                                 ei4=ei4+16
                                                                 ei5=ei5+16
                                                                 Spin=0
 
                                                             if Spin==3 and Spin2==0:
-                                                                sda4=sda4+Slot_1b_bits
+                                                                #Slot_1a_bits
+
+                                                                block3g = int(Slot_1a_bits, 2)
+
+                                                                PI_take_read=PI_take[block3g:block3g+1]
+                                                                Colaider3=PI_take_read
+
+                                                                Spin3=2
+
+                                                                
                                                                 ei4=ei4+3
                                                                 ei5=ei5+3
                                                                 Spin=0
 
                                                             if Spin==4 and Spin2==0:
-                                                                sda4=sda4+Slot_1b_bits
+                                                                #Slot_1b_bits
+
+                                                                block3g = int(Slot_1b_bits, 2)
+                                                                
+                                                                PI_take_read=PI_take[block3g:block3g+5]
+                                                                Colaider3=PI_take_read
+
+                                                                Spin3=2
+
+                                                                
                                                                 ei4=ei4+6
                                                                 ei5=ei5+6
                                                                 Spin=0
 
                                                             if Spin==5 and Spin2==0:
-                                                                sda4=sda4+Slot_1c_bits
+                                                                #Slot_1c_bits
+
+                                                                 block3g = int(Slot_1c_bits, 2)
+                                                                
+                                                                PI_take_read=PI_take[block3g:block3g+5]
+                                                                Colaider3=PI_take_read
+
+                                                                Spin3=2
+                                                                
                                                                 ei4=ei4+9
                                                                 ei5=ei5+9
                                                                 Spin=0
 
                                                             
                                                             if Spin==6 and Spin2==0:
-                                                                sda4=sda4+Slot_1d_bits
+                                                                #Slot_1d_bits
+
+                                                                block3g = int(Slot_1d_bits, 2)
+                                                                
+                                                                PI_take_read=PI_take[block3g:block3g+5]
+                                                                Colaider3=PI_take_read
+
+                                                                Spin3=2
+                                                                
                                                                 ei4=ei4+13
                                                                 ei5=ei5+13
                                                                 Spin=0
-                                                               
+
+                                                            if Spin3==2:
+
+                                                                szx=""
+                                            
+                                                                Colaider3=bin(block3)[2:]
+                                                                lenf=len(Colaider3)
+                                                                 
+                                                                xc=19-lenf%19
+                                                                z=0
+                                                                if xc!=0:
+                                                                    if xc!==19:
+                                                                        while z<xc:
+                                                                            szx="0"+szx
+                                                                            z=z+1
+                                                                                
+                                                                Colaider3=szx+Colaider3
+                                                                sda4=sda4+Colaider3
+                                                                Spin3=0
+
+                                                                
                                                     
                                     e4=""
                                     e4a=""
