@@ -3,7 +3,7 @@ Algorithm Nasa Compression
 
 Developed: Jurijus Pacalovas
 
-Size of the code 402 slots.
+Size of the code 399 slots.
 
 Presentation: 
 
