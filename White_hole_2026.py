@@ -378,7 +378,7 @@ class compression:
                                                                 lenf=len(Colaider3)
                                                                 
                                                                 xc2=lenf5-ei5
-                                                                if xc2<=20:
+                                                                if xc2<=24:
 
                                                                     xc=xc2-lenf%xc2
                                                                     z=0
@@ -389,10 +389,10 @@ class compression:
                                                                                 z=z+1
 
                                                                 else:
-                                                                    xc=20-lenf%20
+                                                                    xc=24-lenf%24
                                                                     z=0
                                                                     if xc!=0:
-                                                                        if xc!=20:
+                                                                        if xc!=24:
                                                                             while z<xc:
                                                                                 szx="0"+szx
                                                                                 z=z+1
@@ -422,13 +422,13 @@ class compression:
                                     sda3=sda2
                                     lenf6=len(sda3)
                                     ei4=0
-                                    ei5=20
+                                    ei5=24
                                     block3=0
                                     Colaider3=""
                                     block2=0
                                     block3=0
 
-                                    while ei5<lenf6+20:
+                                    while ei5<lenf6+24:
                                         e4b=sda3[ei4:ei4+6]
                                         e4=sda3[ei4:ei5]
                                         e4a=sda3[ei4:ei5]
@@ -509,8 +509,8 @@ class compression:
                                                 Colaider3=""
                                                 Spin=0
 
-                                        ei4=ei4+20
-                                        ei5=ei5+20
+                                        ei4=ei4+24
+                                        ei5=ei5+24
                                         
                                     szx=""
 
