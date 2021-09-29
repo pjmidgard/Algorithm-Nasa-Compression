@@ -28,7 +28,6 @@ class compression:
                     if namez=="e":
                         i=2
 
-                     
                     sda4=""
                     sda5=""
                     sda6=""
@@ -256,8 +255,6 @@ class compression:
                                                         
                                                             yu=len(e4)
 
-                                                            
-                                                           
                                                             if Spin==0:
                                                                 eig4=eig4+1
                                                                 eig5=eig5+1
@@ -369,7 +366,7 @@ class compression:
                                                             if Spin==5 and Spin2==0:
                                                                 #Slot_1c_bits
 
-                                                                 block3g = int(Slot_1c_bits, 2)
+                                                                block3g = int(Slot_1c_bits, 2)
                                                                 
                                                                 PI_take_read=PI_take[block3g:block3g+5]
                                                                 Colaider3=PI_take_read
@@ -408,7 +405,7 @@ class compression:
                                                                     xc=xc2-lenf%xc2
                                                                     z=0
                                                                     if xc!=0:
-                                                                        if xc!==xc2:
+                                                                        if xc!=xc2:
                                                                             while z<xc:
                                                                                 szx="0"+szx
                                                                                 z=z+1
@@ -417,7 +414,7 @@ class compression:
                                                                     xc=19-lenf%19
                                                                     z=0
                                                                     if xc!=0:
-                                                                        if xc!==19:
+                                                                        if xc!=19:
                                                                             while z<xc:
                                                                                 szx="0"+szx
                                                                                 z=z+1
@@ -426,8 +423,7 @@ class compression:
                                                                 sda4=sda4+Colaider3
                                                                 Spin3=0
 
-                                                                
-                                                    
+                                                                              
                                     e4=""
                                     e4a=""
                                     e4b=""
@@ -440,15 +436,11 @@ class compression:
                                 lenf8=len(sda2)
                                    
                                                                 
-                               
                                 e2=e2+1
                                 e3=e3+1
 
                                 e4=""
 
-                              
-                          
-                                
                                 cvf1=1
                                 if cvf1==1:
                                     
@@ -472,10 +464,8 @@ class compression:
                                                             e4a=sda3[ei4:ei5]
                                                             yu=len(e4)
 
-                                                           
                                                             block3 = int(e4, 2) # Take block of the file
                                                         
-                                                           
                                                             szx=""
 
                                                             
@@ -579,8 +569,6 @@ class compression:
                                                                  
                                                                 sda4=sda4+"0"+e4
                                                             
-
-                                                                
                                                             ei4=ei4+19
                                                             ei5=ei5+19
                                         
