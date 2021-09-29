@@ -489,7 +489,7 @@ class compression:
                                             ii=16
                                                      
                                                                 
-                                        if lenf>=6 and block>=6 and xe!=-1 or lenf_bits>16 and xe!=-1:
+                                        if lenf>=6 and block>=6 and xe!=-1 or lenf_bits>16 and xe!=-1 or lenf<=5 and block<=5 and lenf_bits>16 and xe!=-1:
                                                                  
                                             sda4=sda4+"0"+e4
                                            
