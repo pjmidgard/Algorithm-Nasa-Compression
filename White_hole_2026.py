@@ -1,4 +1,5 @@
 from time import time
+cvf=0
 import os
 import binascii
 
@@ -61,7 +62,8 @@ class compression:
                     nac=len(nameas)
                     
                     Circle_times3=0
-                    
+                    cvf=2
+                    cvf1=0
                     s=""
                     
                     e2=0
@@ -472,7 +474,7 @@ class compression:
                                                             
                                             Spin=1
                                             bits="1110"
-                                            ii=10
+                                            ii=9
                                                                 
                                         if lenf<=4 and block==4 and lenf_bits<=14 and xe!=-1:
                                                             
