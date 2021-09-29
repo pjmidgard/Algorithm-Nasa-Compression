@@ -1,10 +1,7 @@
 from time import time
-cvf=0
 import os
 import binascii
 
-Circle_times=0
-END_working=0
 lenf=0
 namea=""
 szx=""
@@ -62,8 +59,6 @@ class compression:
                     nac=len(nameas)
                     
                     Circle_times3=0
-                    cvf=2
-                    cvf1=0
                     s=""
                     
                     e2=0
@@ -105,13 +100,10 @@ class compression:
                         lenf5=len(data)
                         
                         END_working=0
-                        Circle_times=0
                         Circle_times2=0
                         
                         while END_working<10:
                        
-                            Circle_times3=Circle_times3+1
-
                             with open(nameas, "ab") as f2:
                                 if Circle_times3==1:
 
@@ -560,7 +552,6 @@ class compression:
                                         jl=binascii.unhexlify(qqwslenf % n)
                                         sssssw=len(jl)
                                                     
-                                        Circle_times=Circle_times+1
                                         szxzzza=""
                                         szxzs=""
                                         sda2=sda6
