@@ -428,7 +428,7 @@ class compression:
                                     block2=0
                                     block3=0
 
-                                    while ei5<lenf6+19:
+                                    while ei5<lenf6+20:
                                         e4b=sda3[ei4:ei4+6]
                                         e4=sda3[ei4:ei5]
                                         e4a=sda3[ei4:ei5]
