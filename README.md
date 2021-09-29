@@ -3,6 +3,8 @@ Algorithm Nasa Compression
 
 Developed: Jurijus Pacalovas
 
+Size of the code 444 slots.
+
 Presentation: 
 My name is Jurijus Pacalovas.
 I had read literature about compression like RLE, Huffman, PI, and API.
