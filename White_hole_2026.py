@@ -13,7 +13,7 @@ class compression:
                 
     def cryptograpy_compression(self):
                 
-                self.name = "Written: Jurijus pacalovas Date: 16/09/2021 14:23"
+                self.name = "Written: Jurijus pacalovas Date: 29/09/2021 17:38"
                 
                 if namez=="c" or namez=="e":
                     if namez=="c":
