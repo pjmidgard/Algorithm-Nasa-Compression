@@ -16,7 +16,7 @@ class compression:
                 
     def cryptograpy_compression(self):
                 
-                self.name = "Written: Jurijus pacalovas Date: 29/09/2021 17:43"
+                self.name = "Written: Jurijus pacalovas Date: 29/09/2021 17:46"
                 
                 if namez=="c" or namez=="e":
                     if namez=="c":
@@ -228,13 +228,13 @@ class compression:
                                         Spin2=0
 
                                         while ei5<=lenf5:
-                                                            Slot_16=sda3[ei4:ei4+16]#Slot 16
+                                                            Slot_16=sda3[ei4:ei4+17]#Slot 16
                                                             Slot_4_bits=sda3[ei4:ei4+4]#Slot 4
                                                             Slot_2_bits=sda3[ei4:ei4+2]#Slot 2
-                                                            Slot_1a_bits=sda3[ei4:ei4+3]#Slot a 1100
-                                                            Slot_1b_bits=sda3[ei4:ei4+6]#Slot a 1101
-                                                            Slot_1c_bits=sda3[ei4:ei4+9]#Slot a 1110
-                                                            Slot_1d_bits=sda3[ei4:ei4+13]#Slot a 1111
+                                                            Slot_1a_bits=sda3[ei4:ei4+4]#Slot a 1100
+                                                            Slot_1b_bits=sda3[ei4:ei4+7]#Slot a 1101
+                                                            Slot_1c_bits=sda3[ei4:ei4+10]#Slot a 1110
+                                                            Slot_1d_bits=sda3[ei4:ei4+14]#Slot a 1111
                                                             e4=sda3[ei4:ei5]
                                                             e4a=sda3[ei4:ei5]
                                                             e4h=sda3c[eig4:eig5]
@@ -309,8 +309,8 @@ class compression:
 
                                                                 Spin3=2
 
-                                                                ei4=ei4+16
-                                                                ei5=ei5+16
+                                                                ei4=ei4+17
+                                                                ei5=ei5+17
                                                                 Spin=0
 
                                                             if Spin==3 and Spin2==0:
@@ -323,8 +323,8 @@ class compression:
 
                                                                 Spin3=2
 
-                                                                ei4=ei4+3
-                                                                ei5=ei5+3
+                                                                ei4=ei4+4
+                                                                ei5=ei5+4
                                                                 Spin=0
 
                                                             if Spin==4 and Spin2==0:
@@ -337,8 +337,8 @@ class compression:
 
                                                                 Spin3=2
 
-                                                                ei4=ei4+6
-                                                                ei5=ei5+6
+                                                                ei4=ei4+7
+                                                                ei5=ei5+7
                                                                 Spin=0
 
                                                             if Spin==5 and Spin2==0:
@@ -351,8 +351,8 @@ class compression:
 
                                                                 Spin3=2
                                                                 
-                                                                ei4=ei4+9
-                                                                ei5=ei5+9
+                                                                ei4=ei4+10
+                                                                ei5=ei5+10
                                                                 Spin=0
 
                                                             
@@ -366,8 +366,8 @@ class compression:
 
                                                                 Spin3=2
                                                                 
-                                                                ei4=ei4+13
-                                                                ei5=ei5+13
+                                                                ei4=ei4+17
+                                                                ei5=ei5+17
                                                                 Spin=0
 
                                                             if Spin3==2:
@@ -378,7 +378,7 @@ class compression:
                                                                 lenf=len(Colaider3)
                                                                 
                                                                 xc2=lenf5-ei5
-                                                                if xc2<=19:
+                                                                if xc2<=20:
 
                                                                     xc=xc2-lenf%xc2
                                                                     z=0
