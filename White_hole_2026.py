@@ -311,7 +311,7 @@ class compression:
                                                             if Spin==2 and Spin2==0:
                                                                 #Slot_16
                                                                 block3g = int(Slot_16, 2)
-                                                                
+
                                                                 PI_take_read=PI_take[block3g:block3g+5]
                                                                 Colaider3=PI_take_read
 
@@ -331,7 +331,6 @@ class compression:
 
                                                                 Spin3=2
 
-                                                                
                                                                 ei4=ei4+3
                                                                 ei5=ei5+3
                                                                 Spin=0
@@ -341,12 +340,11 @@ class compression:
 
                                                                 block3g = int(Slot_1b_bits, 2)
                                                                 
-                                                                PI_take_read=PI_take[block3g:block3g+5]
+                                                                PI_take_read=PI_take[block3g:block3g+2]
                                                                 Colaider3=PI_take_read
 
                                                                 Spin3=2
 
-                                                                
                                                                 ei4=ei4+6
                                                                 ei5=ei5+6
                                                                 Spin=0
@@ -356,7 +354,7 @@ class compression:
 
                                                                 block3g = int(Slot_1c_bits, 2)
                                                                 
-                                                                PI_take_read=PI_take[block3g:block3g+5]
+                                                                PI_take_read=PI_take[block3g:block3g+3]
                                                                 Colaider3=PI_take_read
 
                                                                 Spin3=2
@@ -371,7 +369,7 @@ class compression:
 
                                                                 block3g = int(Slot_1d_bits, 2)
                                                                 
-                                                                PI_take_read=PI_take[block3g:block3g+5]
+                                                                PI_take_read=PI_take[block3g:block3g+4]
                                                                 Colaider3=PI_take_read
 
                                                                 Spin3=2
