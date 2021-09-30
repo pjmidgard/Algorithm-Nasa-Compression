@@ -15,7 +15,7 @@ PI Algorithm: it is written information were find and the end.
 API compression algorithm: it takes from 1 to 348 variations.
 Calculus Algorithm takes 14 bits and find what does not exist and write it, also n toeed to write 1 for compress 0 when not compress or just compress like this 2^n. Need add-ones then delete them.
 Pi:
-Need to count pi 10 Million, 19 bits, 1-5 symbol(s) like this 0, 10, 1100-1111.
+Need to count pi. Start and end or min number of the index.
 I will try to makes it better.
 
 Bye, bye.
